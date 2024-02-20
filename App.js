@@ -7,6 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 import ManageExpense from "./screens/ManageExpense";
 import RecentExpenses from "./screens/RecentExpenses";
 import AllExpenses from "./screens/AllExpenses";
+import ExpensesContextProvider from "./store/expenses-context";
 
 import { GlobalStyles } from "./constants/styles";
 import IconButton from "./components/UI/IconButton";
@@ -62,7 +63,7 @@ function ExpensesOverview() {
 
 export default function App() {
   return (
-    <>
+    <ExpensesContextProvider>
       <StatusBar style="auto" />
       <NavigationContainer>
         <Stack.Navigator
@@ -83,6 +84,6 @@ export default function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
-    </>
+    </ExpensesContextProvider>
   );
 }
