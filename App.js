@@ -4,9 +4,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
-import ManageExpense from "./screens/ManageExpense";
-import RecentExpenses from "./screens/RecentExpenses";
-import AllExpenses from "./screens/AllExpenses";
+import ManageExpense from "./Screens/ManageExpense";
+import RecentExpenses from "./Screens/RecentExpenses";
+import AllExpenses from "./Screens/AllExpenses";
 import ExpensesContextProvider from "./store/expenses-context";
 
 import { GlobalStyles } from "./constants/styles";
@@ -64,7 +64,7 @@ function ExpensesOverview() {
 export default function App() {
   return (
     <ExpensesContextProvider>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
